@@ -435,6 +435,7 @@ var resizePizzas = function (size) {
         }
     }
 
+    // refactor to use percentages returned from sizeSwitcher rather than calculate px - prevent fsl
     // Iterates through pizza elements on the page and changes their widths
     function changePizzaSizes(size) {
         var newSize = sizeSwitcher(size) * 100;
@@ -490,6 +491,7 @@ function updatePositions() {
     window.performance.mark("mark_start_frame");
 
     var items = document.querySelectorAll('.mover');
+    // calculate position once and batch updates to background pizzas
     var scroll = (document.body.scrollTop / 1250);
     for (var i = 0; i < items.length; i++) {
         //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
@@ -513,6 +515,8 @@ window.addEventListener('scroll', updatePositions);
 document.addEventListener('DOMContentLoaded', function () {
     var cols = 8;
     var s = 256;
+    // limit background pizzas to 40 instead of 200. my screen really only needs 24 
+    // but 40 covers a much larger screen with minimal impact to fps
     for (var i = 0; i < 40; i++) {
         var elem = document.createElement('img');
         elem.className = 'mover';
