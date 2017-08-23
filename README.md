@@ -1,8 +1,22 @@
 ## Website Performance Optimization portfolio project
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
+To get started, clone or download the repository and inspect the code. Or if you just want to see it run, check out 
+my version of the [page speed test](https://gw-ghostwolf.github.io/frontendnano-optimize/) or the
+[pizza site fps](https://gw-ghostwolf.github.io/frontendnano-optimize/views/pizza.html) hosted by github.
 
-To get started, check out the repository and inspect the code.
+### Page Speed Test
+https://gw-ghostwolf.github.io/frontendnano-optimize/
+##### Optimizations
+* Asynchornized the non-critical javascript
+* Added media query to the print css
+* Inlined the screen css
+* Optimized images
+
+### Pizza Frames per Second
+https://gw-ghostwolf.github.io/frontendnano-optimize/views/pizza.html
+##### Optimizations
+* Fixed forced synchronous layouts (FSL) errors
+* Reduced background pizza count from 200 to 40
 
 ### Getting started
 
